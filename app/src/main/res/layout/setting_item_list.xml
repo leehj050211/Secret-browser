@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/setting_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorlightDark"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/setting_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingHorizontal="5dp"
+            android:text="title"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/setting_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_title"
+            android:ellipsize="end"
+            android:paddingHorizontal="5dp"
+            android:text="sub_title"
+            android:textColor="@color/colorlightgray"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/setting_title_bar"
+        android:background="@color/colorlightDark"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/setting_btn_mode"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorgray"
+            android:text="값 변경"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/setting_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/setting_type"
+            android:paddingHorizontal="10dp"
+            android:text="value"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorlightgray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/setting_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/setting_btn_mode"
+            android:paddingHorizontal="10dp"
+            android:text="type"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorlightgray"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

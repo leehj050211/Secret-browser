@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDark"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edturl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="107dp"
+        android:background="@null"
+        android:hint="url 입력"
+        android:imeOptions="actionGo"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/btn_tab"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="48dp"
+        android:background="@color/colorDark"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tab"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tab_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="1dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/btn_addtab"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorDark"
+        android:onClick="mOnClick"
+        android:scaleType="fitCenter"
+        android:src="@drawable/menu"
+        app:layout_constraintBottom_toTopOf="@id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ProgressBar
+        android:id="@+id/webloadngBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:elevation="1dp"
+        android:progressTint="@color/colorBlue"
+        android:progressBackgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edturl"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </WebView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RelativeLayout
+            android:id="@+id/errorpage"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <TextView
+                android:id="@+id/errortitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:text="에러가 발생 하였습니다"
+                android:textColor="@color/colorlightgray"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/errorsubtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="65dp"
+                android:text="에러 원인"
+                android:textColor="@color/colorlightgray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/errormeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="100dp"
+                android:text="net::ERR"
+                android:textColor="@color/colorlightgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/errorsubtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="130dp"
+                android:text="다음 방법을 시도해 보세요."
+                android:textColor="@color/colorlightgray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/errorsubtitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="160dp"
+                android:text="해결 방법"
+                android:textColor="@color/colorlightgray"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

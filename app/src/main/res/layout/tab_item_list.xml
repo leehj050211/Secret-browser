@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF">
+
+        <RelativeLayout
+            android:id="@+id/tab_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_titlebar_shape"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp">
+
+            <TextView
+                android:id="@+id/tab_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tab_btn_del"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="title"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/tab_btn_del"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cancel" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
